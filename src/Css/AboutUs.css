@@ -1,3 +1,4 @@
+/* AboutUs.css */
 .aboutus-header {
   display: flex;
   align-items: center;
@@ -6,21 +7,30 @@
   background-color: #e6f1f1;
   flex-wrap: wrap;
   gap: 40px;
+  transition: all 0.3s ease;
 }
 
 .aboutus-header-right {
   flex: 1;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-.aboutus-header-right img {
+.aboutus-image {
   width: 100%;
   max-width: 700px;
   height: auto;
   border-radius: 12px;
   border: 2px solid transparent;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.aboutus-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .aboutus-header-left {
@@ -34,6 +44,12 @@
   font-weight: 500;
   margin-bottom: 10px;
   font-style: italic;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.aboutus-header:hover .aboutus-subtitle {
+  letter-spacing: 1.2px;
 }
 
 .aboutus-section-divider {
@@ -50,14 +66,25 @@
   background-color: #ccc;
   flex: 1;
   max-width: 80px;
+  transition: all 0.3s ease;
 }
 
-.aboutus-section-divider h2 {
+.aboutus-header:hover .aboutus-divider-line {
+  max-width: 100px;
+  background-color: #036d75;
+}
+
+.aboutus-title {
   font-size: 24px;
   font-weight: 700;
   color: #033d4f;
   text-align: center;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.aboutus-header:hover .aboutus-title {
+  color: #036d75;
 }
 
 .aboutus-description {
@@ -65,6 +92,11 @@
   line-height: 1.8;
   color: #444;
   margin-bottom: 35px;
+  transition: all 0.3s ease;
+}
+
+.aboutus-header:hover .aboutus-description {
+  color: #333;
 }
 
 .aboutus-contact-card {
@@ -76,6 +108,15 @@
   border-left: 5px solid #036d75;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.aboutus-contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-left-width: 8px;
 }
 
 .aboutus-contact-icon {
@@ -89,12 +130,31 @@
   justify-content: center;
   min-width: 50px;
   min-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.aboutus-contact-card:hover .aboutus-contact-icon {
+  transform: rotate(15deg) scale(1.1);
+  background-color: #02565d;
+}
+
+.contact-icon {
+  transition: all 0.3s ease;
+}
+
+.aboutus-contact-card:hover .contact-icon {
+  transform: scale(1.1);
 }
 
 .aboutus-contact-info h3 {
   margin: 0;
   font-size: 18px;
   color: #033d4f;
+  transition: all 0.3s ease;
+}
+
+.aboutus-contact-card:hover .aboutus-contact-info h3 {
+  color: #036d75;
 }
 
 .aboutus-contact-info p {
@@ -106,4 +166,70 @@
 .aboutus-highlight {
   color: #037880;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.aboutus-contact-card:hover .aboutus-highlight {
+  color: #02565d;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .aboutus-header {
+    padding: 60px 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .aboutus-header {
+    padding: 50px 60px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus-header {
+    flex-direction: column;
+    padding: 50px 40px;
+  }
+  
+  .aboutus-header-left,
+  .aboutus-header-right {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .aboutus-section-divider {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .aboutus-divider-line {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .aboutus-title {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutus-header {
+    padding: 40px 20px;
+  }
+  
+  .aboutus-title {
+    font-size: 22px;
+  }
+  
+  .aboutus-contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .aboutus-contact-icon {
+    margin-bottom: 10px;
+  }
 }

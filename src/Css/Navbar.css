@@ -22,15 +22,16 @@
 }
 
 .navbar-logo {
-  height: 3.125rem;
+  height: 3.1rem;
   width: 11.625rem;
   display: flex;
+  background-color: #ffffff;
   justify-content: center;
   align-items: center;
 }
 
 .navbar-logo img {
-  height: 4.5rem;
+  height: 22vh;
   width: 100%;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -127,7 +128,7 @@
   }
   
   .navbar-logo img {
-    height: 4rem;
+    height: 18vh;
   }
   
   .navbar-links {
@@ -210,6 +211,6 @@
   }
   
   .navbar-logo img {
-    height: 3.5rem;
+    height: 18vh;
   }
 }
