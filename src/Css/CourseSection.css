@@ -1,0 +1,164 @@
+.course-section {
+  background-color: #f0fafa;
+  padding: 4rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.course-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.course-subtitle {
+  font-size: 1.125rem;
+  color: #7a8c8c;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.course-title {
+  font-size: 2.5rem;
+  color: #022b30;
+  font-weight: 700;
+}
+
+.course-grid {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Course Card */
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.course-image {
+  position: relative;
+  border-radius: 15px;
+  margin-bottom: 3px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.instructor {
+  position: absolute;
+  bottom: 2px; /* 2px from bottom */
+  left: 2px;   /* 2px from left */
+  background: #fff;
+  color: #076E74;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 6px; /* small padding inside the box */
+  border-radius: 20px;
+}
+
+.instructor-span {
+  font-size: 12px;
+  color: #076E74;
+  font-weight: 500;
+}
+
+.instructor-image-span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #076E74;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.course-title-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 15px;
+  line-height: 1.4;
+}
+
+.course-description {
+  font-size: 13px;
+  color: #555;
+  margin: 8px 15px 0;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.course-meta {
+  font-size: 13px;
+  color: #777;
+  margin: 8px 15px;
+}
+
+.price-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 15px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+}
+
+.current-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0b6b6f;
+  margin-right: 5px;
+}
+
+.old-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.rating {
+  font-size: 13px;
+  color: #ffb400;
+}
+
+.rating span {
+  color: #666;
+  margin-left: 4px;
+}
+
+.start-btn {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 10px auto 0;
+  background: #0b6b6f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background: #09585b;
+}

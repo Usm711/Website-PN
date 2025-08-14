@@ -1,0 +1,159 @@
+:root {
+  --background: #f8f9fa;
+  --foreground: #033d4f;
+  --primary: #036d75;
+  --primary-foreground: #ffffff;
+  --card: #ffffff;
+  --border: #ddd;
+  --text-muted: #444;
+}
+
+.expertise-section {
+  padding: 4rem 1rem;
+  background-color: var(--background);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: var(--primary);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.expertise-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px rgba(3, 109, 117, 0.2);
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background-color: rgba(3, 109, 117, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.expertise-card:hover .icon-wrapper {
+  background-color: var(--primary);
+}
+
+.card-icon {
+  font-size: 24px;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.expertise-card:hover .card-icon {
+  color: var(--primary-foreground);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-top: 1rem;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.card-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card-button i {
+  margin-left: 0.5rem;
+}
+
+.card-button:hover {
+  background-color: #024f54;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.view-more-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.view-more-button i {
+  margin-left: 0.5rem;
+}
+
+.view-more-button:hover {
+  background-color: #024f54;
+}
+
+@media (max-width: 480px) {
+  .card-button,
+  .view-more-button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}

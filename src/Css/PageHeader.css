@@ -1,0 +1,24 @@
+.page-header {
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 1px; /* Ensures it sticks right after navbar */
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+}

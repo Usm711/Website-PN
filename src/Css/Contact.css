@@ -1,0 +1,212 @@
+/* Import a font from Google Fonts (optional, but recommended for a similar look) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Main container for the entire section */
+.contact-section {
+    background-color: #076E74; /* Dark teal background */
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative lines in the background */
+.contact-section::before, .contact-section::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.contact-section::before {
+    top: 40px;
+    left: 40px;
+    width: 250px;
+    height: 300px;
+}
+
+.contact-section::after {
+    bottom: 40px;
+    right: 40px;
+    width: 300px;
+    height: 400px;
+}
+
+/* Flex container to center content */
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    position: relative;
+    z-index: 2;
+}
+
+/* Left side: Form Wrapper */
+.contact-form-wrapper {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    color: #ffffff;
+}
+
+.get-in-touch {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.contact-form-wrapper h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #c9d6d6;
+    border-radius: 8px;
+    background-color: #f4f7f6;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #009688; /* Accent teal on focus */
+}
+
+.send-button {
+    background-color: #009688; /* Accent teal */
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #00796b; /* Darker teal on hover */
+    transform: translateY(-2px);
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+}
+
+/* Right Side: Info Wrapper */
+.contact-info-wrapper {
+    flex: 0 0 380px; /* Flex-grow, flex-shrink, flex-basis */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.info-icon-bg {
+    background-color: #009688;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.info-text h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.info-text p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.info-follow {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+.info-follow h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 15px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    background-color: #009688;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #00796b;
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-form-wrapper,
+    .contact-info-wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+}

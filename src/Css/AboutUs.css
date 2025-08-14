@@ -1,0 +1,109 @@
+.aboutus-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+  background-color: #e6f1f1;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.aboutus-header-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutus-header-right img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.aboutus-header-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.aboutus-subtitle {
+  color: #037880;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.aboutus-section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.aboutus-divider-line {
+  height: 1px;
+  background-color: #ccc;
+  flex: 1;
+  max-width: 80px;
+}
+
+.aboutus-section-divider h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #033d4f;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.aboutus-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+.aboutus-contact-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  background-color: #f2f8f8;
+  border-left: 5px solid #036d75;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.aboutus-contact-icon {
+  background-color: #036d75;
+  color: white;
+  font-size: 20px;
+  padding: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.aboutus-contact-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #033d4f;
+}
+
+.aboutus-contact-info p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.aboutus-highlight {
+  color: #037880;
+  font-weight: 600;
+}
