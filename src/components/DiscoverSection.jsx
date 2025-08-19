@@ -23,7 +23,7 @@ const DiscoverSection = () => {
             <div className="section-header">
               <div className="tagline">
                 <div className="tagline-line"></div>
-                <span className="tagline-text">What we do</span>
+                <span className="tagline-text">\ What we do \</span>
               </div>
               <h2 className="section-title">
                 DISCOVER HOW WE HELP YOU{" "}

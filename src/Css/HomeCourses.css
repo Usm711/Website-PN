@@ -1,0 +1,191 @@
+/* Main Container */
+.tech-training-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.training-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.training-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.training-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Courses Grid */
+.courses-grid {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  gap: 30px;
+}
+
+/* Course Card */
+.course-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.course-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-image {
+  width: 90%;
+  height: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.course-card:hover .course-image {
+  transform: scale(1.05);
+
+}
+
+.course-content {
+  padding: 20px;
+}
+
+.course-content h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.course-description {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.star-icon {
+  color: #f39c12;
+  font-size: 1rem;
+  margin-right: 3px;
+}
+
+/* Duration & Price */
+.duration-price {
+  margin-bottom: 20px;
+}
+
+.duration {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.discounted-price {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.original-price {
+  color: #95a5a6;
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+
+/* Button */
+.start-course-btn {
+  background-color: #076E74;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.start-course-btn:hover {
+  background-color: #207b80;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.start-course-btn:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .training-header h1 {
+    font-size: 2rem;
+  }
+  
+  .training-header p {
+    font-size: 1rem;
+  }
+  
+  .courses-grid {
+    flex-direction: column;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-training-container {
+    padding: 30px 15px;
+  }
+  
+  .training-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .course-card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}

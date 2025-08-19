@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 import "../Css/PortfolioMain.css";
 
 const PortfolioMain = () => {
@@ -25,35 +26,25 @@ const PortfolioMain = () => {
           <div className="portfolio-items-container">
             {/* First Row */}
             <div className="portfolio-row">
-              <div className="portfolio-item portfolio-item1">
+              <div className="portfolio-item portfolio-item1" style={{ width: "854px" }}>
                 <div className="portfolio-item-content">
                   <h2>Cloud Network Setup for FinPlus</h2>
-                  <p>Find the best cloud-based networking and network system to run in the Cloud.</p>
+                  <p>End-to-end cloud-based networking and firewall system for a refresh client.</p>
                   <div className="tags-container">
-                    <span className="tag">Measuring</span>
+                    <span className="tag">Networking</span>
                     <span className="tag">Security</span>
-                    <span className="tag">Live</span>
-                    <span className="tag">Virtual</span>
-                    <span className="tag">SaaS</span>
-                    <span className="tag">Websafe</span>
+                    <span className="tag">AWS</span>
                   </div>
                 </div>
               </div>
 
-              <div className="portfolio-item portfolio-item2">
+              <div className="portfolio-item portfolio-item2" style={{ width: "504px", height: "480px" }}>
                 <div className="portfolio-item-content">
-                  <h2>Company Website for MedConnect</h2>
-                  <p>Calling us via website of a service responsible for the use of our local new platform.</p>
+                  <h2>Smart Surveillance System for TechMart.</h2>
+                  <p>Designed and installed a comprehensive CCTV and IP camera network for multi-flickr.</p>
                   <div className="tags-container">
-                    <div className="tag-item">
-                      <span className="tag-label">webmaster</span>
-                    </div>
-                    <div className="tag-item">
-                      <span className="tag-label">security</span>
-                    </div>
-                    <div className="tag-item">
-                      <span className="tag-label">uxDesigning</span>
-                    </div>
+                    <span className="tag">CCTV installation</span>
+                    <span className="tag">IP cameras</span>
                   </div>
                 </div>
               </div>
@@ -61,42 +52,35 @@ const PortfolioMain = () => {
 
             {/* Second Row */}
             <div className="portfolio-row">
-              <div className="portfolio-item portfolio-item3">
+              <div className="portfolio-item portfolio-item3" style={{ width: "504px", height: "480px" }}>
                 <div className="portfolio-item-content">
-                  <h2>Smart Surveillance System for TechMart</h2>
-                  <p>Designed and installed a comprehensive CSTV and IP computer network for multi-track</p>
+                  <h2>Company Website for MedConnect</h2>
+                  <p>Designed and developed a secure, responsive website for a digital healthcare platform.</p>
                   <div className="tags-container">
-                    <div className="tag-item">
-                      <span className="tag-label">cctv installation</span>
-                    </div>
-                    <div className="tag-item">
-                      <span className="tag-label">IP channels</span>
-                    </div>
+                    <span className="tag">WordPress</span>
+                    <span className="tag">Security</span>
+                    <span className="tag">UX Designing</span>
                   </div>
                 </div>
               </div>
 
-              <div className="portfolio-item portfolio-item4">
+              <div className="portfolio-item portfolio-item4" style={{ width: "854px" }}>
                 <div className="portfolio-item-content">
-                  <h2>Digital Marketing for NeoGym</h2>
-                  <p>Full-scale marketing strategy with social media, SEO and all campaigns.</p>
+                  <h2>Digital Marketing for NeoCyro</h2>
+                  <p>Full-scale marketing strategy with social media, SEO, and ad campaigns.</p>
                   <div className="tags-container">
-                    <div className="tag-item">
-                      <span className="tag-label">SEO</span>
-                    </div>
-                    <div className="tag-item">
-                      <span className="tag-label">Meta-Ads</span>
-                    </div>
-                    <div className="tag-item">
-                      <span className="tag-label">Google Analytics</span>
-                    </div>
+                    <span className="tag">SEO</span>
+                    <span className="tag">Meta Ads</span>
+                    <span className="tag">Google Analytics</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="view-more-container">
-              <button className="view-more-button">View More →</button>
+              <button className="view-more-button">
+                View More <FaArrowRight className="arrow-icon" />
+              </button>
             </div>
           </div>
         </div>

@@ -31,17 +31,17 @@
 /* Left Header */
 .header-left {
   flex: 1;
-  padding-right: 50px;
+  padding-right: 10px;
+  padding-left: 110px;
   max-width: 550px;
 }
 
 .greenishText {
   color: #076E74;
-  font-weight: 600;
+  font-weight: 620;
   font-size: 16px;
   margin-bottom: 15px;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .fontChange {
@@ -116,6 +116,7 @@
 .header-right {
   flex: 1;
   position: relative;
+  padding-left: 40px;
 }
 
 .header-right img {

@@ -1,0 +1,107 @@
+/* History.css */
+.history{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.history-banner {
+  width: 40%;
+  height: 10vh;
+  min-height: 200px;
+  max-height: 200px;
+  background-image: url('/images/portfolio6.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 110, 116, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-content {
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.history-text {
+  color: white;
+  font-size: clamp(1rem, 2vw, 1rem);
+  font-weight: 500;
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.contact-button {
+  background-color: transparent;
+  color: white;
+  
+  background-color: #024f54;
+  padding: 12px 40px;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-button:hover {
+  background-color: #076E74;
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .history-banner {
+    height: 30vh;
+    min-height: 350px;
+  }
+  
+  .history-text {
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .contact-button {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-banner {
+    height: 30vh;
+    min-height: 300px;
+  }
+  
+  .history-text {
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
+    margin-bottom: 1.2rem;
+  }
+  
+  .contact-button {
+    padding: 8px 25px;
+  }
+}

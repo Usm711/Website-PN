@@ -6,6 +6,7 @@ const ProcessSection = ({processSteps}) => {
 
   return (
     <section className="process-section">
+      
 
       <div className="process-container">
         <div className="process-header">

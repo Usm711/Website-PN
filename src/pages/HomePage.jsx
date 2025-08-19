@@ -5,10 +5,11 @@ import HighlightsStrip from "../components/HighlightsStrip";
 import AboutUs from "../components/AboutUs";
 // import ProcessSection from "../components/ProcessSection";
 import DiscoverSection from "../components/DiscoverSection";
+import HomeCourses from "../components/HomeCourses"
 import OurExpertise from "../components/OurExpertise";
 import Contact from "../components/Contact";
 import ProcessSectionNew from "../components/ProcessSectionNew";
-
+import History from "../components/History";
 function HomePage() {
 
   return (
@@ -20,7 +21,9 @@ function HomePage() {
       <ProcessSectionNew />
       <DiscoverSection />
       <OurExpertise />
+      <HomeCourses />
       <Contact/>
+      <History />
     </>
   );
 }

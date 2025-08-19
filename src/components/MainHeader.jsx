@@ -15,10 +15,13 @@ function Header() {
 
   return (
     <header ref={headerRef} className="header fade-in">
+      
       {/* Left header */}
+
       <div className="header-left">
-        <p className="greenishText">\we are here\</p>
-        <h1 className="fontChange">Empowering Your Digital Future with us!</h1>
+        <p className="greenishText">\ We Are Here \</p>
+        <h1 className="fontChange">Empowering Your</h1>
+        <h1 className="fontChange">Digital Future with us!</h1>
         <p>
           PulxeNet delivers cutting-edge IT solutions — from web development to
           infrastructure services — helping businesses scale, innovate, and
