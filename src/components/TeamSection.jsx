@@ -3,13 +3,32 @@ import "../Css/TeamSection.css"; // Your own local CSS file
 
 const teamData = [
   {
-    name: "Usman",
+    name: "Usman1",
     role: "CEO",
-    bio: "11+ years in Networking currently works with Comsats Unversity and in PulxeNet  .",
+    bio: "11+ years IT infrastructure, Computer Networks and Cybersecurity experience.",
     image: "usmanSir.png",
   },
   {
-    name: "Mobeen Ali Shah",
+    name: "Syed fawad Shah",
+    role: "Web Developer",
+    bio: "Develops high quality, user friendly and functional Website using React",
+    image: "",
+  },
+  {
+    name: "Omama",
+    role: "UI Desginer",
+    bio: "Designs intuitive, user-friendly, and visually engaging digital experiences.",
+    image: "",
+  },
+  {
+    name: "Warda Khan",
+    role: "Project Lead App Developer",
+    bio: "Lead projects and develops high quality mobile or web applications.",
+    image: "warda.jpeg",
+
+  },
+  {
+    name: "Mobeen Ali Shah6",
     role: "Web Developer",
     bio: "Develops high quality, user friendly and functional Website using React",
     image: "mobeen.png",
@@ -21,23 +40,23 @@ const teamData = [
     image: "suliman.png",
   },
   {
+
     name: "Umaima Aftab",
     role: "App Developer",
     bio: "Builds and maintains user-friendly, efficient, and reliable mobile or web applications.",
     image: "umaima.jpg",
   },
   {
-    name: "Warda Khan",
-    role: "Project Lead App Developer",
-    bio: "Lead projects and develops high quality mobile or web applications.",
-    image: "warda.jpeg",
+    name: "ali"
+
   },
   {
     name: "Nadra khan",
     role: "Graphic Designer",
     bio: "Create visually compelling designs to communicate ideas and enhance brand identity.",
     image: "Nadra.jpg",
-  },
+  }
+
 ];
 
 const SocialRow = () => (

@@ -2,6 +2,7 @@ import React from "react";
 import PageHeader from "../components/PageHeader";
 import AboutUs from "../components/AboutUs";
 import TeamSection from "../components/TeamSection";
+import History from "../components/History";
 
 function AboutusPage() {
     const headerProps = {
@@ -14,6 +15,7 @@ function AboutusPage() {
           <PageHeader headerProps={headerProps}/>
           <AboutUs/>
           <TeamSection/>
+          <History />
         </>
     );
     }

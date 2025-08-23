@@ -2,6 +2,7 @@
   background-color: #f0fafa;
   padding: 4rem 1rem;
   font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
 }
 
 .process-container {
@@ -29,8 +30,10 @@
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
   gap: 2rem;
+  position: relative;
 }
 
 /* Service Card Styling */
@@ -39,11 +42,17 @@
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 2;
 }
 
 .service-icon {
@@ -94,6 +103,8 @@
   color: #555;
   margin-bottom: 20px;
   line-height: 1.5;
+  overflow: hidden;
+  flex-grow: 1;
 }
 
 .service-btn {
@@ -107,9 +118,166 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .service-btn:hover {
   background: #0c5a57;
+  transform: translateY(-2px);
+}
+
+.close-btn {
+  background: #147874;
+}
+
+.close-btn:hover {
+  background: #0f6a67;
+}
+
+/* 13th Hidden Card */
+.hidden-card {
+  display: none;
+  position: absolute;
+  width: 80%;
+  height: 65vh;
+  left: 15%;
+  z-index: 20;
+  background: #e6f4f3;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  min-height: auto;
+}
+
+.hidden-card.visible {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Position hidden card based on row */
+.hidden-card[data-row="0"] {
+  top: 0;
+}
+
+.hidden-card[data-row="1"] {
+  top: calc(100% / 4 * 1);
+}
+
+.hidden-card[data-row="2"] {
+  top: calc(100% / 4 * 2);
+}
+
+.hidden-card[data-row="3"] {
+  top: calc(100% / 4 * 3);
+}
+
+/* Cards in the same row as hidden card */
+.service-card.same-row {
+  z-index: 1;
+}
+
+/* Ensure grid has proper height for all rows */
+.process-grid {
+  min-height: calc(4 * 320px + 3 * 2rem);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: calc(6 * 320px + 5 * 2rem);
+  }
+  
+  .hidden-card {
+    width: 100%;
+  }
+
+  @media (max-width: 3350px) {
+    
+    .hidden-card {
+      width: 70%;
+    }
+  }
+  
+  /* Adjust row positioning for 2-column layout */
+  .hidden-card[data-row="0"] {
+    top: 0;
+  }
+  
+  .hidden-card[data-row="1"] {
+    top: calc(100% / 6 * 2);
+  }
+  
+  .hidden-card[data-row="2"] {
+    top: calc(100% / 6 * 4);
+  }
+  
+  .hidden-card[data-row="3"] {
+    top: calc(100% / 6 * 6);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+  
+  .hidden-card {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0 !important;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card {
+    min-height: 280px;
+  }
+  
+  .process-title {
+    font-size: 2rem;
+  }
+  
+  .process-subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Reset all positioning for mobile */
+  .hidden-card[data-row] {
+    top: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .process-grid {
+    gap: 1rem;
+  }
+  
+  .service-card {
+    padding: 16px;
+    min-height: 250px;
+  }
+  
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  .service-title {
+    font-size: 16px;
+  }
+  
+  .service-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
 }

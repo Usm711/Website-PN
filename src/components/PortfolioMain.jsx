@@ -22,11 +22,11 @@ const PortfolioMain = () => {
             </div>
           </div>
 
-          {/* Portfolio Items */}
+          {/* Portfolio Items */} 
           <div className="portfolio-items-container">
             {/* First Row */}
             <div className="portfolio-row">
-              <div className="portfolio-item portfolio-item1" style={{ width: "854px" }}>
+              <div className="portfolio-item portfolio-item1" style={{ width: "570px" , height: "320px"}}>
                 <div className="portfolio-item-content">
                   <h2>Cloud Network Setup for FinPlus</h2>
                   <p>End-to-end cloud-based networking and firewall system for a refresh client.</p>
@@ -38,7 +38,7 @@ const PortfolioMain = () => {
                 </div>
               </div>
 
-              <div className="portfolio-item portfolio-item2" style={{ width: "504px", height: "480px" }}>
+              <div className="portfolio-item portfolio-item2" style={{ width: "440px", height: "320px" }}>
                 <div className="portfolio-item-content">
                   <h2>Smart Surveillance System for TechMart.</h2>
                   <p>Designed and installed a comprehensive CCTV and IP camera network for multi-flickr.</p>
@@ -52,7 +52,7 @@ const PortfolioMain = () => {
 
             {/* Second Row */}
             <div className="portfolio-row">
-              <div className="portfolio-item portfolio-item3" style={{ width: "504px", height: "480px" }}>
+              <div className="portfolio-item portfolio-item3" style={{ width: "440px", height: "320px" }}>
                 <div className="portfolio-item-content">
                   <h2>Company Website for MedConnect</h2>
                   <p>Designed and developed a secure, responsive website for a digital healthcare platform.</p>
@@ -64,7 +64,7 @@ const PortfolioMain = () => {
                 </div>
               </div>
 
-              <div className="portfolio-item portfolio-item4" style={{ width: "854px" }}>
+              <div className="portfolio-item portfolio-item4" style={{ width: "570px", height: "320px" }}>
                 <div className="portfolio-item-content">
                   <h2>Digital Marketing for NeoCyro</h2>
                   <p>Full-scale marketing strategy with social media, SEO, and ad campaigns.</p>
@@ -86,16 +86,6 @@ const PortfolioMain = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <footer className="footer">
-        <div className="portfolio-footer">
-          <p className="quote">"Some of the History of Our Company is that we are Catching up through Video."</p>
-          <div className="contact-link">
-            <span>Get In Touch</span>
-            <span className="arrow">→</span>
-          </div>
-        </div>
-      </footer>
     </section>
   );
 };

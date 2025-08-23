@@ -3,6 +3,7 @@ import PageHeader from "../components/PageHeader";
 import ServiceCoursesPlanning from "../components/ServiceCoursesPlanning";
 import CourseSection from "../components/CourseSection";
 import DiscoverSection from "../components/DiscoverSection";
+import History from "../components/History";
 
 function ServicesPage() {
     const headerProps = {
@@ -48,45 +49,45 @@ function ServicesPage() {
   },
   {
     number: "06",
-    title: "CRM Solutions",
+    title: "App Development",
     iconClass: "fas fa-users",
     description:
-      "Developing and customizing Customer Relationship Management systems to enhance customer engagement and streamline sales processes.",
+      "Designing and developing customized mobile applications to improve user experience, boost business efficiency, and provide innovative digital solutions for clients.",
   },
   {
     number: "07",
-    title: "Hospital Management System (HMS)",
+    title: "Web Development",
     iconClass: "fas fa-hospital",
     description:
       "Building secure and efficient hospital systems for patient records, billing, inventory, and appointment management.",
   },
   {
     number: "08",
-    title: "School Management System",
+    title: "Digital Marketing",
     iconClass: "fas fa-school",
     description:
-      "Creating digital platforms for attendance, grades, schedules, and communication between teachers, students, and parents.",
+      "Providing digital marketing solutions for brand growth, engagement, visibility, and communication through SEO, social media, and targeted campaigns.",
   },
   {
     number: "09",
-    title: "Point of Sale (POS)",
+    title: "Graphic Designing",
     iconClass: "fas fa-cash-register",
     description:
-      "Designing POS systems for fast, accurate transactions, real-time sales tracking, and inventory control.",
+      "Designing graphics for creative branding, visual appeal, engaging content, and effective communication.",
   },
   {
     number: "10",
-    title: "Restaurant Management System",
+    title: "Game Development",
     iconClass: "fas fa-utensils",
     description:
-      "Offering systems to manage menus, table reservations, orders, billing, and kitchen coordination efficiently.",
+      "Offering games with creative design, smooth gameplay, engaging stories, graphics, and multiplayer features efficiently.",
   },
   {
     number: "11",
-    title: "Pharmacy Management System",
+    title: "Our Solutions",
     iconClass: "fas fa-prescription-bottle-alt",
     description:
-      "Creating platforms for inventory control, prescription management, sales tracking, and compliance in pharmacies.",
+      "We offer CRM Solutions for better customer engagement, Hospital and School Management Systems for records and communication, POS Systems for sales and inventory, and Restaurant Management Systems to handle menus, orders, and reservations efficiently.",
   },
   {
     number: "12",
@@ -103,6 +104,7 @@ function ServicesPage() {
           <DiscoverSection />
           <ServiceCoursesPlanning processSteps={processSteps}/>
           <CourseSection />
+          <History />
         </>
     );
     }

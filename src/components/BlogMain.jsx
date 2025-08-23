@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Css/BlogMain.css'
+import History from './History';
 const BlogMain = () => {
       const blogPosts = [
     {
@@ -70,15 +71,7 @@ const BlogMain = () => {
           </div>
         ))}
       </div>
-
-      <div className="blog-footer">
-        <p className="quote">
-          *Some of the History of Our Company is that we are Catching up through Video.*
-        </p>
-        <div className="contact-link">
-          <span>Get in Touch</span>
-        </div>
-      </div>
+      <History />
     </div>
   );
 };

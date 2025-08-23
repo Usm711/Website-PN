@@ -8,18 +8,18 @@ const coursesData = [
     title: "Professional IT Training In CCNA",
     description: "Networking Investments® and board your IT career with expert-led CCNA training.",
     duration: "4 weeks",
-    originalPrice: "$29.90",
-    discountedPrice: "$24.92",
-    image: "images/ccna.png"
+    originalPrice: "Rs: 40k",
+    discountedPrice: "Rs: 45k",
+    image: "images/ccna.jpg"
   },
   {
     id: 2,
     title: "MCSE",
     description: "Advance your system administrator skills with our comprehensive MCSE training.",
     duration: "6 weeks",
-    originalPrice: "$29.90",
-    discountedPrice: "$24.92",
-    image: "images/react.png"
+    originalPrice: "Rs: 30k",
+    discountedPrice: "Rs: 35k",
+    image: "images/mcse.jpeg"
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const coursesData = [
     duration: "5 weeks",
     originalPrice: "$29.90",
     discountedPrice: "$24.92",
-    image: "images/mikotik.png"
+    image: "images/microtik.jpeg"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const coursesData = [
     duration: "8 weeks",
     originalPrice: "$29.90",
     discountedPrice: "$24.92",
-    image: "images/nodejs.png"
+    image: "images/personNodejs.jpg"
   }
 ];
 

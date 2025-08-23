@@ -19,11 +19,12 @@
   position: relative;
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+}
 
 .discover-container {
   display: flex;
   max-width: 1200px;
+  top: 20px;
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -107,11 +108,18 @@
 .content-wrapper {
   width: 100%;
   max-width: 600px;
+  height: 100vh;
   margin-left: auto;
 }
 
 .section-header {
   margin-bottom: 2rem;
+  height: 10vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* left align */
+
 }
 
 .tagline {
@@ -142,17 +150,30 @@
   margin-bottom: 1.5rem;
 }
 
+/* Fix for the highlight text */
+.section-title .highlight {
+  color: var(--primary) !important;
+}
+
 .section-description {
   font-size: 1rem;
   color: var(--text-muted);
   line-height: 1.7;
-  margin-bottom: 2rem;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5rem;
+  line-height: 1.6;      /* readability */
+  z-index: 1;            /* sit above background only */
 }
 
 /* Cards */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 20px;
+  position: relative;
+  top: 45px;
+  background-color: #ffffff;
   gap: 1.5rem;
   margin: 2rem 0;
 }
@@ -207,6 +228,8 @@
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
+  position: relative;
+  top: 35px;
   transition: all 0.3s ease;
 }
 
@@ -221,6 +244,17 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .custom-button{
+    top: 98px;
+  }
+  .discover-section{
+    height: 120vh;
+  }
+
+  .card-grid{
+    top: 120px;
+  }
+
   .discover-container {
     max-width: 900px;
   }
@@ -240,6 +274,9 @@
 }
 
 @media (max-width: 768px) {
+  .card-grid{
+    top: 150px;
+  }
   .discover-container {
     flex-direction: column;
     padding: 1rem;
@@ -277,6 +314,12 @@
 }
 
 @media (max-width: 480px) {
+  .card-grid{
+    top: 150px;
+  }
+  .discover-section{
+   height: 120vh;
+  }
   .section-title {
     font-size: 1.5rem;
   }
@@ -296,5 +339,4 @@
   .image-box {
     height: 20rem;
   }
-}
 }

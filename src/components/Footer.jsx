@@ -17,7 +17,7 @@ const Footer = () => {
               />
             </div>
             <p className="footer-description">
-              Pulxet is a forward-thinking IT company delivering tailored solutions in software development, 
+              PulxeNet is a forward-thinking IT company delivering tailored solutions in software development, 
               networking, digital marketing, and cloud services. We help businesses grow through innovation, 
               efficiency, and trusted technology partnerships.
             </p>

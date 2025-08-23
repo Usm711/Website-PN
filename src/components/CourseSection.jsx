@@ -1,109 +1,110 @@
 import React from "react";
 import "../Css/CourseSection.css"; // New CSS for course cards
+import { Link } from "react-router-dom";
 
 const CourseSection = () => {
   const courses = [
     {
       instructor: "Kashif Abbas",
-      image: "/images/0246e10e8c8cf972814eb82cd5b63b25db82ef35.png",
+      image: "/images/ccna.jpg",
       instructorImg: "instructor1.jpg",
       title: "Professional IT training in CCNA",
       description:
         "Networking fundamentals and boost your IT career with expert-led CCNA training.",
       duration: "10 weeks",
-      price: "$24.92",
-      oldPrice: "$32.90",
+      price: "Rs: 40k",
+      oldPrice: "Rs: 45k",
       rating: "⭐⭐⭐⭐⭐",
       reviews: "(1.2K)",
     },
     {
       instructor: "Kashif Abbas",
-      image: "/images/4a3a2f2b3d9e3a652bc9d81ed2e4d36d1148ad07.png",
+      image: "/images/cloud.jpg",
       instructorImg: "instructor2.jpg",
       title: "Mastering Cloud Computing",
       description:
         "Learn cloud fundamentals and advanced deployment techniques with real projects.",
       duration: "8 weeks",
-      price: "$29.99",
-      oldPrice: "$39.99",
+      price: "Rs: 30k",
+      oldPrice: "Rs: 35k",
       rating: "⭐⭐⭐⭐",
       reviews: "(980)",
     },
     {
       instructor: "Kashif Abbas",
-      image: "/images/4bf805350a1399465083305b7f84622dc7c592f1.png",
+      image: "/images/cybersecurity.jpg",
       instructorImg: "instructor3.jpg",
       title: "Cybersecurity Essentials",
       description:
         "Understand and protect against modern cyber threats using top tools.",
       duration: "12 weeks",
-      price: "$34.50",
-      oldPrice: "$44.00",
+      price: "Rs: 50k",
+      oldPrice: "Rs: 55k",
       rating: "⭐⭐⭐⭐⭐",
       reviews: "(2.1K)",
     },
     {
       instructor: "Kashif Abbas",
-      image: "/images/a2ee0bbbec5cc0640125990426dd8a9bbf8a9255.png",
+      image: "/images/devops.jpg",
       instructorImg: "instructor4.jpg",
-      title: "Full-Stack DevOps",
+      title: "DevOps",
       description:
         "Build, deploy, and automate with the latest DevOps tools and pipelines.",
       duration: "9 weeks",
-      price: "$27.45",
-      oldPrice: "$36.00",
+      price: "Rs: 20k",
+      oldPrice: "Rs: 25k",
       rating: "⭐⭐⭐⭐",
       reviews: "(1.5K)",
     },
      {
       instructor: "Kashif Abbas",
-      image: "/images/355e8fc8a0148f6b0946c7f6443fd0688de928bb.png",
+      image: "/images/Web.jpg",
       instructorImg: "instructor1.jpg",
-      title: "Professional IT training in CCNA",
+      title: "Web Development",
       description:
-        "Networking fundamentals and boost your IT career with expert-led CCNA training.",
+        "Master Web Development and grow your IT career with our expert-led training..",
       duration: "10 weeks",
-      price: "$24.92",
-      oldPrice: "$32.90",
+      price: "Rs: 20k",
+      oldPrice: "Rs: 25k",
       rating: "⭐⭐⭐⭐⭐",
       reviews: "(1.2K)",
     },
     {
       instructor: "Kashif Abbas",
-      image: "/images/63dd95a7e2370fe83c0d3951d3671782c136cec0.png",
+      image: "/images/App.jpg",
       instructorImg: "instructor2.jpg",
-      title: "Mastering Cloud Computing",
+      title: "App Development",
       description:
-        "Learn cloud fundamentals and advanced deployment techniques with real projects.",
+        "Learn app development fundamentals and advanced techniques with real projects.",
       duration: "8 weeks",
-      price: "$29.99",
-      oldPrice: "$39.99",
+      price: "Rs: 30k",
+      oldPrice: "Rs: 35k",
       rating: "⭐⭐⭐⭐",
       reviews: "(980)",
     },
     {
       instructor: "Kashif Abbas",
-      image: "/images/143d84301f6365507aa63b5a4821fda43917e9ae.png",
+      image: "/images/graphicDesign.jpg",
       instructorImg: "instructor3.jpg",
-      title: "Cybersecurity Essentials",
+      title: "Graphic Desgining",
       description:
-        "Understand and protect against modern cyber threats using top tools.",
+        "Learn and create modern graphic designs using top tools.",
       duration: "12 weeks",
-      price: "$34.50",
-      oldPrice: "$44.00",
+      price: "Rs:10k",
+      oldPrice: "Rs: 15k",
       rating: "⭐⭐⭐⭐⭐",
       reviews: "(2.1K)",
     },
     {
       instructor: "Kashif Abbas",
-      image: "/images/1aa493bdbb8c72f66d1291c16bf9d9c0246087da.png",
+      image: "/images/digitalMarketing.jpg",
       instructorImg: "instructor4.jpg",
-      title: "Full-Stack DevOps",
+      title: "Digital Marketing",
       description:
-        "Build, deploy, and automate with the latest DevOps tools and pipelines.",
+        "Plan, execute, and grow with the latest Digital Marketing tools and strategies.",
       duration: "9 weeks",
-      price: "$27.45",
-      oldPrice: "$36.00",
+      price: "Rs: 10k",
+      oldPrice: "Rs: 15k",
       rating: "⭐⭐⭐⭐",
       reviews: "(1.5K)",
     },
@@ -160,7 +161,11 @@ const CourseSection = () => {
                   {course.rating} <span>{course.reviews}</span>
                 </div>
               </div>
-              <button className="start-btn">Start Course →</button>
+              
+              <Link to="/contact">
+  <button className="start-btn">Start Course →</button>
+</Link>
+
             </div>
           ))}
         </div>

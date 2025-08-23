@@ -33,6 +33,7 @@ const ProcessSectionNew = () => {
         <h1 className="section-subtitle">OUR PROCESS</h1>
         
         <div className="process-steps">
+          {/* <img src="/images/ProcessArrow.png" alt="Process" /> */}
           {steps.map((step, index) => (
             <div key={index} className="process-step">
               <div className="step-icon">{step.icon}</div>

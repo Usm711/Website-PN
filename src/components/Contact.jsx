@@ -78,7 +78,7 @@ const Contact = () => {
               </div>
               <div className="info-content">
                 <h4>Call Anytime</h4>
-                <p>+92 3469222711</p>
+                <p>+92 3469222711 | +92 3278593478</p>
               </div>
             </div>
 
@@ -88,7 +88,7 @@ const Contact = () => {
               </div>
               <div className="info-content">
                 <h4>Send Email</h4>
-                <p>info@pulxenet.com</p>
+                <p>info@pulxenet.com | pulxenetpvtltd@gmail.com</p>
               </div>
             </div>
 

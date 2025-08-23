@@ -26,15 +26,13 @@ const DiscoverSection = () => {
                 <span className="tagline-text">\ What we do \</span>
               </div>
               <h2 className="section-title">
-                DISCOVER HOW WE HELP YOU{" "}
-                <span className="highlight">GROW THROUGH INNOVATIVE</span>{" "}
-                IT SOLUTION
+                <span className="highlight">DISCOVER HOW WE HELP YOU GROW THROUGH INNOVATIVE IT SOLUTION</span>
               </h2>
               <p className="section-description">
                 At YourCompany, we deliver cutting-edge IT solutions tailored to your business 
                 goals. From web and mobile app development to UI/UX design, cloud 
                 integration, and digital transformation — we handle it all. Our focus is on 
-                innovation, quality, and scalable tech.
+                innovation, quality.
               </p>
             </div>
 
