@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/DiscoverSection.css"; // Importing the CSS for styling
+import "../Css/DiscoverSection.css";
 
 const DiscoverSection = () => {
   return (
@@ -7,12 +7,15 @@ const DiscoverSection = () => {
       <div className="discover-container">
         {/* Left Background */}
         <div className="discover-left">
+          <div className="circle circle1"></div>
+          <div className="circle circle2"></div>
+          <div className="circle circle3"></div>
         </div>
 
         {/* Center Image Placeholder */}
         <div className="discover-center-image">
           <div className="image-box">
-            <img src="/images/b8a063ebe0d7b3f666b070c02df3ff79cc499b9c.jpg" alt="" />
+            <img src="/images/b8a063ebe0d7b3f666b070c02df3ff79cc499b9c.jpg" alt="IT Solutions" />
           </div>
         </div>
 
@@ -68,7 +71,7 @@ const DiscoverSection = () => {
             </div>
 
             {/* CTA Button */}
-            <div>
+            <div className="button-container">
               <button className="custom-button">
                 View More
                 <i className="fas fa-arrow-right button-icon"></i>

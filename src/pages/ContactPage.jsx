@@ -1,6 +1,8 @@
 import React from "react";
 import Contact from "../components/Contact";
 import PageHeader from "../components/PageHeader";
+import ContactBackground from "../components/ContactBackground";
+import History from "../components/History";
 
 function ContactPage() {
     const headerProps = {
@@ -10,8 +12,9 @@ function ContactPage() {
     };
     return (
         <>
-          <PageHeader headerProps={headerProps}/>
+          <ContactBackground />
           <Contact/>
+          <History />
         </>
     );
     }

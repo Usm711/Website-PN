@@ -120,17 +120,19 @@ header {
   font-size: 15px;
   padding: 10px 18px;
   /* border: 1px solid #036d75; */
-  border-bottom: 1px solid #036d75;
+  /* border-bottom: 1px solid #036d75; */
+  text-decoration: underline;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 8px;
+  
 }
 
 .servicesButton:hover {
-  background-color: rgba(3, 109, 117, 0.05);
+  /* background-color: rgba(3, 109, 117, 0.05); */
   transform: translateY(-2px);
 }
 

@@ -1,20 +1,20 @@
-/* History.css */
-.history{
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.history {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
+
 .history-banner {
   width: 40%;
-  height: 10vh;
   min-height: 200px;
   max-height: 200px;
   background-image: url('/images/portfolio6.jpg');
   background-size: cover;
   background-position: center;
-  object-fit: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -22,6 +22,7 @@
   align-items: center;
   position: relative;
   margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .banner-overlay {
@@ -35,6 +36,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-radius: 20px;
 }
 
 .banner-content {
@@ -45,21 +47,20 @@
 
 .history-text {
   color: white;
-  font-size: clamp(1rem, 2vw, 1rem);
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.4;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 2rem;
   font-style: italic;
 }
 
 .contact-button {
-  background-color: transparent;
-  color: white;
-  
   background-color: #024f54;
+  color: white;
+  border: none;
   padding: 12px 40px;
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -70,38 +71,201 @@
 
 .contact-button:hover {
   background-color: #076E74;
-  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Large desktops (1920px and above) */
+@media screen and (min-width: 1920px) {
   .history-banner {
-    height: 30vh;
-    min-height: 350px;
+    width: 35%;
+    min-height: 220px;
+    max-height: 220px;
   }
   
   .history-text {
+    font-size: 1.4rem;
+  }
+  
+  .contact-button {
+    padding: 14px 45px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Standard laptops (1366px to 1919px) - Dell Latitude 5490 size */
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
+  .history-banner {
+    width: 40%;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  
+  .history-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small laptops (1024px to 1365px) */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .history-banner {
+    width: 50%;
+    min-height: 190px;
+    max-height: 190px;
+  }
+  
+  .history-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .contact-button {
+    padding: 11px 35px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .history {
+    min-height: 40vh;
+    padding: 1.5rem;
+  }
+  
+  .history-banner {
+    width: 70%;
+    min-height: 180px;
+    max-height: 180px;
+  }
+  
+  .history-text {
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    line-height: 1.4;
+    line-height: 1.3;
   }
   
   .contact-button {
     padding: 10px 30px;
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Large mobile devices (481px to 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .history {
+    min-height: 35vh;
+    padding: 1.2rem;
+  }
+  
   .history-banner {
-    height: 30vh;
-    min-height: 300px;
+    width: 85%;
+    min-height: 170px;
+    max-height: 170px;
+    border-radius: 16px;
+  }
+  
+  .banner-overlay {
+    border-radius: 16px;
+  }
+  
+  .banner-content {
+    padding: 15px;
   }
   
   .history-text {
-    font-size: clamp(1.3rem, 5vw, 1.7rem);
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+  }
+  
+  .contact-button {
+    padding: 9px 28px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile devices (320px to 480px) */
+@media screen and (max-width: 480px) {
+  .history {
+    min-height: 30vh;
+    padding: 1rem;
+  }
+  
+  .history-banner {
+    width: 90%;
+    min-height: 160px;
+    max-height: 160px;
+    border-radius: 14px;
+  }
+  
+  .banner-overlay {
+    border-radius: 14px;
+  }
+  
+  .banner-content {
+    padding: 12px;
+  }
+  
+  .history-text {
+    font-size: 0.9rem;
     margin-bottom: 1.2rem;
+    line-height: 1.3;
   }
   
   .contact-button {
     padding: 8px 25px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Very small devices (below 320px) */
+@media screen and (max-width: 319px) {
+  .history {
+    min-height: 28vh;
+    padding: 0.8rem;
+  }
+  
+  .history-banner {
+    width: 95%;
+    min-height: 150px;
+    max-height: 150px;
+    border-radius: 12px;
+  }
+  
+  .banner-overlay {
+    border-radius: 12px;
+  }
+  
+  .banner-content {
+    padding: 10px;
+  }
+  
+  .history-text {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-button {
+    padding: 7px 20px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .history {
+    min-height: 60vh;
+  }
+  
+  .history-banner {
+    min-height: 150px;
+    max-height: 150px;
+  }
+}
+
+/* High-density displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .history-banner {
+    background-image: url('/images/portfolio6@2x.jpg');
   }
 }

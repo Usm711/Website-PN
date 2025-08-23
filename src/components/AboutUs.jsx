@@ -35,7 +35,7 @@ function AboutUs() {
             <div className="aboutus-contact-info">
               <h3>Get Instant Professional Advice</h3>
               <p>
-                Ready to Help: <span className="aboutus-highlight">+346-922271</span> / <span className="aboutus-highlight">+327-8593478</span>
+                Ready to Help: <span className="aboutus-highlight">+92 3469222711</span> / <span className="aboutus-highlight">+92 3278593478</span>
               </p>
             </div>
           </div>

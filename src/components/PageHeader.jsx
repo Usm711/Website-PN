@@ -1,17 +1,18 @@
 import React from "react";
 import "../Css/PageHeader.css";
 
-function PageHeader({ headerProps }) {
-    const { title, src } = headerProps;
+function PageHeader() {
+
   return (
-    <header
-      className="page-header"
-      style={{ backgroundImage: `url(${src})` }}
-    >
-      <div className="overlay">
-        <h1 className="header-title">{title}</h1>
+    <div>
+      <div className='image-background'>
+        <img src="/images/aboutBackground.jpg" alt="portfolioImage" />
+
+        <div className='content'><h1>ABOUT US</h1>
+      <h3>Home * <span>About</span></h3>
       </div>
-    </header>
+    </div>
+      </div>
   );
 }
 

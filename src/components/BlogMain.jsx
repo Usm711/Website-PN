@@ -1,80 +1,102 @@
-import React from 'react'
-import '../Css/BlogMain.css'
+import React from 'react';
+import '../Css/BlogMain.css';
 import History from './History';
+
 const BlogMain = () => {
-      const blogPosts = [
+  const blogPosts = [
     {
       date: "01 March",
       author: "By John",
-      category: "01 summer",
+      category: "Technology",
       publishDate: "Apr 17th, 2020",
       title: "Explore insights, Trends & innovations from the World of IT",
-      readTime: "03-Min Road",
+      readTime: "3 Min Read",
+      image: "/images/blog1.jpg"
     },
     {
       date: "01 March",
-      author: "By John",
-      category: "01 summer",
+      author: "By Sarah",
+      category: "Web Development",
       publishDate: "Apr 15th, 2025",
       title: "Stay Ahead with the Latest Tech News and Expert Tips",
-      readTime: "03-Min Road",
+      readTime: "5 Min Read",
+      image: "/images/blog2.jpg"
     },
     {
       date: "01 March",
-      author: "By John",
-      category: "01 summer",
-      publishDate: "07-July 2023",
+      author: "By Mike",
+      category: "UI/UX Design",
+      publishDate: "July 7th, 2023",
       title: "Why UI/UX Design Can Make or Break Your Product",
-      readTime: "03-Min Road",
+      readTime: "4 Min Read",
+      image: "/images/blog3.jpg"
     },
     {
       date: "01 March",
-      author: "By John",
-      category: "01 summer",
-      publishDate: "07-July 2023",
+      author: "By Emma",
+      category: "Business",
+      publishDate: "June 20th, 2023",
       title: "Seeing Your Business with Custom Web Solutions",
-      readTime: "03-Min Road",
+      readTime: "6 Min Read",
+      image: "/images/blog4.jpg"
     },
     {
       date: "01 March",
-      author: "By John",
-      category: "01 summer",
-      publishDate: "07-July 2023",
+      author: "By Alex",
+      category: "Innovation",
+      publishDate: "May 12th, 2023",
       title: "Top 5 Tech Trends Shaping the Future of Business",
-      readTime: "03-Min Road",
+      readTime: "7 Min Read",
+      image: "/images/blog5.jpg"
     },
   ];
 
   return (
-   <div className="blog-container">
+    <div className="blog-container">
       <div className="blog-header">
-        <p>Our Blog</p>
-        <h2>LATEST POST</h2>
+        <p className="blog-subtitle">Our Blog</p>
+        <h2 className="blog-title">LATEST POSTS</h2>
+        <p className="blog-description">Discover the latest insights and trends in technology</p>
       </div>
 
       <div className="blog-posts">
         {blogPosts.map((post, index) => (
           <div className="blog-card" key={index}>
-            <div className="post-meta">
-              <span className="post-date">{post.date}</span>
-              <div className="post-author-category">
-                <span>{post.author}</span>
-                <span>{post.category}</span>
-              </div>
-              <span className="publish-date">{post.publishDate}</span>
+            <div className="blog-image-container">
+              <img 
+                src={post.image || "https://via.placeholder.com/300x200/076E74/ffffff?text=Blog+Image"} 
+                alt={post.title}
+                className="blog-image"
+              />
+              <div className="category-badge">{post.category}</div>
             </div>
-            <h3 className="post-title">{post.title}</h3>
-            <div className="read-more">
-              <span>Read More</span>
-              <span className="read-time">{post.readTime}</span>
+            
+            <div className="post-content">
+              <div className="post-meta">
+                <span className="post-date">{post.date}</span>
+                <span className="post-author">{post.author}</span>
+                <span className="publish-date">{post.publishDate}</span>
+              </div>
+              
+              <h3 className="post-title">{post.title}</h3>
+              
+              <div className="post-footer">
+                <span className="read-time">{post.readTime}</span>
+                <button className="read-more-btn">Read More</button>
+              </div>
             </div>
           </div>
         ))}
       </div>
+      
+      <div className="blog-cta">
+        <p>Want to read more interesting articles?</p>
+        <button className="cta-button">View All Posts</button>
+      </div>
+      
       <History />
     </div>
   );
 };
 
-
-export default BlogMain
+export default BlogMain;

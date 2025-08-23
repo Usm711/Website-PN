@@ -1,11 +1,11 @@
 :root {
   --background: #f8f9fa;
-  --foreground: #033d4f;
-  --primary: #036d75;
+  --foreground: #076E74;
+  --primary: #076E74;
   --primary-foreground: #ffffff;
   --card: #ffffff;
   --border: #e0e0e0;
-  --text-muted: #495057;
+  --text-muted: #076E74;
   --header-color: #212529;
 }
 

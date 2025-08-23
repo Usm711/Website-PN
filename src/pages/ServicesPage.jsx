@@ -4,6 +4,7 @@ import ServiceCoursesPlanning from "../components/ServiceCoursesPlanning";
 import CourseSection from "../components/CourseSection";
 import DiscoverSection from "../components/DiscoverSection";
 import History from "../components/History";
+import ServicesBackground from "../components/ServicesBackground";
 
 function ServicesPage() {
     const headerProps = {
@@ -100,7 +101,8 @@ function ServicesPage() {
 
     return (
         <>
-          <PageHeader headerProps={headerProps}/>
+        <ServicesBackground />
+          {/* <PageHeader headerProps={headerProps}/> */}
           <DiscoverSection />
           <ServiceCoursesPlanning processSteps={processSteps}/>
           <CourseSection />

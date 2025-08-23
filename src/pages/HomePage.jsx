@@ -10,6 +10,8 @@ import ProcessSectionNew from "../components/ProcessSectionNew";
 import History from "../components/History";
 import FadeInSection from "../components/FadeInSection"; // 👈 new component
 import "../Css/HomePage.css";
+import TeamMainPage from "../components/TeamMainPage";
+import TeamHeading from "../components/TeamHeading";
 
 function HomePage() {
   return (
@@ -21,6 +23,8 @@ function HomePage() {
         <FadeInSection><ProcessSectionNew /></FadeInSection>
         <FadeInSection><DiscoverSection /></FadeInSection>
         <FadeInSection><OurExpertise /></FadeInSection>
+        <FadeInSection><TeamHeading /></FadeInSection>
+        <FadeInSection><TeamMainPage /></FadeInSection>
         <FadeInSection><HomeCourses /></FadeInSection>
         <FadeInSection><Contact /></FadeInSection>
         <FadeInSection><History /></FadeInSection>

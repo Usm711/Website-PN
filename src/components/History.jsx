@@ -6,7 +6,7 @@ const History = () => {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate("/contact"); // This will navigate to your Contact page
+    navigate("/contact");
   };
 
   return (
