@@ -1,0 +1,48 @@
+import React from "react";
+import { FaHeadset } from "react-icons/fa";
+import "../Css/AboutUs.css";
+
+function AboutUs() {
+  return (
+    <header className="aboutus-header">
+      <div className="aboutus-header-right">
+        <img
+          src="/images/51c4e18b227ca9a8cfd63e4c13f5f1b3cc266761.jpg"
+          alt="PulxeNet Team Meeting"
+          className="aboutus-image"
+        />
+      </div>
+      <div className="aboutus-header-left">
+        <div className="aboutus-content">
+          <p className="aboutus-subtitle">\About us\</p>
+
+          <div className="aboutus-section-divider">
+            <div className="aboutus-divider-line"></div>
+            <h2 className="aboutus-title">EMPOWERING INNOVATION THROUGH IT</h2>
+            <div className="aboutus-divider-line"></div>
+          </div>
+
+          <p className="aboutus-description">
+            PulxeNet is a forward-thinking IT company delivering smart, scalable digital solutions.
+            We specialize in development, design, and tech support to help businesses grow in a digital-first world.
+            With innovation at our core, we turn your ideas into reliable tech products.
+          </p>
+
+          <div className="aboutus-contact-card">
+            <div className="aboutus-contact-icon">
+              <FaHeadset className="contact-icon" />
+            </div>
+            <div className="aboutus-contact-info">
+              <h3>Get Instant Professional Advice</h3>
+              <p>
+                Ready to Help: <span className="aboutus-highlight">+92 3469222711</span> / <span className="aboutus-highlight">+92 3278593478</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default AboutUs;

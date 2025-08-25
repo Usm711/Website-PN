@@ -1,0 +1,55 @@
+.image-background{
+    width: 100%;
+    height: 39.4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(/images/portfolio1.jpg);
+    background-size: cover;
+    background-position: center; */
+    position: relative;
+}
+
+.image-background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+    position: absolute;
+    color: white;
+    line-height: 75px;
+}
+.content h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+.content h3{
+    position: absolute;
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 600;
+    left: 35%;
+}
+
+.content h3 span{
+    color: #076E74;
+    font-weight: bold;
+}
+/* 🔹 Overlay for dark effect */
+.image-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 0.5 means 50% dark */
+    z-index: 1;
+}
+.content {
+    position: absolute;
+    color: white;
+    line-height: 75px;
+    z-index: 2; /* Content stays above overlay */
+}

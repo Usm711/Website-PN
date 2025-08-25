@@ -1,0 +1,17 @@
+:root{
+  --background-color: white;
+  --paragraph-color: black;
+  --div-background-color: #076E74;
+  --div-inside-color: white;
+
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
