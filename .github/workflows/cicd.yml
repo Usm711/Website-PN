@@ -32,13 +32,29 @@ jobs:
             echo "npm install failed, retrying ($n/5)..."
             sleep 10
           done
+      - name: Audit dependencies for vulnerabilities
+        run: npm audit --audit-level=high || echo "Audit warnings, review required."
+        continue-on-error: true
       - name: Build
-        run: npm run build
+        run: |
+          n=0
+          until [ "$n" -ge 3 ]
+          do
+            npm run build && break
+            n=$((n+1))
+            echo "Build failed, retrying ($n/3)..."
+            sleep 10
+          done
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
           name: production-files
           path: dist/
+      - name: Verify build output
+        run: |
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "Build output missing or empty. Failing job." && exit 1
+          fi
   
   deploy:
     needs: build
@@ -51,12 +67,19 @@ jobs:
           name: production-files
           path: dist/
 
-      - name: Deploy to cPanel via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Verify downloaded build output
+        run: |
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "Downloaded build output missing or empty. Failing job." && exit 1
+          fi
+
+      - name: Deploy to cPanel via SSH/SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.CPANEL_FTP_SERVER }}
-          username: ${{ secrets.CPANEL_FTP_USERNAME }}
-          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
-          server-dir: ${{ secrets.CPANEL_FTP_PATH }}
-          local-dir: dist/
-          port: ${{ secrets.CPANEL_FTP_PORT || 21 }}
+          host: ${{ secrets.CPANEL_SSH_SERVER }}
+          username: ${{ secrets.CPANEL_SSH_USERNAME }}
+          password: ${{ secrets.CPANEL_SSH_PASSWORD }} # Or use 'key' for private key
+          port: 21098
+          source: "dist/*"
+          target: ${{ secrets.CPANEL_SSH_PATH }}
+        continue-on-error: false
