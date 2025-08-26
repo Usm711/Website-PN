@@ -36,12 +36,12 @@ jobs:
           name: production-files
           path: dist/
 
-        - name: Deploy to cPanel via SSH/SFTP
-          uses: appleboy/scp-action@v0.1.7
-          with:
-            host: ${{ secrets.CPANEL_SSH_SERVER }}
-            username: ${{ secrets.CPANEL_SSH_USERNAME }}
-            password: ${{ secrets.CPANEL_SSH_PASSWORD }} # Or use 'key' for private key
-            port: 21098
-            source: "dist/*"
-            target: ${{ secrets.CPANEL_SSH_PATH }}
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.CPANEL_FTP_SERVER }}
+          username: ${{ secrets.CPANEL_FTP_USERNAME }}
+          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
+          server-dir: ${{ secrets.CPANEL_FTP_PATH }}
+          local-dir: dist/
+          port: ${{ secrets.CPANEL_FTP_PORT || 21 }}
