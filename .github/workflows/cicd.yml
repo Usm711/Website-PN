@@ -1,0 +1,93 @@
+name: Node.js CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: |
+          n=0
+          until [ "$n" -ge 5 ]
+          do
+            npm install && break
+            n=$((n+1))
+            echo "npm install failed, retrying ($n/5)..."
+            sleep 10
+          done
+
+      - name: Audit dependencies for vulnerabilities
+        run: npm audit --audit-level=high || echo "Audit warnings, review required."
+        continue-on-error: true
+
+      - name: Build
+        run: |
+          n=0
+          until [ "$n" -ge 3 ]
+          do
+            npm run build && break
+            n=$((n+1))
+            echo "Build failed, retrying ($n/3)..."
+            sleep 10
+          done
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-files
+          path: dist/
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "Build output missing or empty. Failing job." && exit 1
+          fi
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download production artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: production-files
+          path: dist/
+
+      - name: Verify downloaded build output
+        run: |
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "Downloaded build output missing or empty. Failing job." && exit 1
+          fi
+
+      - name: Deploy to cPanel via SSH/SFTP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.CPANEL_SSH_SERVER }}
+          username: ${{ secrets.CPANEL_SSH_USERNAME }}
+          key: ${{ secrets.CPANEL_SSH_KEY }}
+          port: 21098  
+          source: "dist/*"
+          target: ${{ secrets.CPANEL_SSH_PATH }}
+        continue-on-error: false
